@@ -234,8 +234,10 @@ public function getStartRow(){
 }
 /**
  * 展示分页列表
+ * @return string 
  */
 public function pagination(){
+	$str = '';
 	//分页列表宽度从其父元素继承
 	if($this->pages > 1){         //总页数大于1页才分页
 		$str = '<div class="pagination" style="text-align:'.$this->align.'">'."\r\n";
@@ -244,8 +246,8 @@ public function pagination(){
 		$str .= $this->pageDown();  //下一页
 		$str .= $this->pageJump();  //跳转
 		$str .= '</div>'."\r\n";
-		echo $str;
 	}
+	return $str;
 }
 /**
  * 得到分页对象

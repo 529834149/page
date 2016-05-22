@@ -23,7 +23,7 @@
 	}
 	//基本参数
 	$records = 100;   //记录总数
-	$pagesize = 2;   //每页显示的记录数【当所有记录只能够显示1页时,不会出现分页列表】
+	$pagesize = 5;   //每页显示的记录数【当所有记录只能够显示1页时,不会出现分页列表】
 	//配置数组【可缺省,表示默认配置】
 	$config = array(
 			 'pagelistsize' => 7   			//翻页列表的大小【不能小于5,默认simple--10 default--7】
@@ -52,9 +52,9 @@
 	<link rel="stylesheet" type="text/css" href="./Page.css">
 </head>
 <body>
-	<div style="width:60%;border:1px solid red;">
+	<div style="width:90%;border:1px solid red;">
 		<!--展示分页列表,列表的宽度继承其父元素的宽度-->
-		<?php $page->pagination() ?>
+		<?php echo $page->pagination() ?>
 	</div>
 </body>
 </html>
