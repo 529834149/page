@@ -22,26 +22,26 @@
 			include_once($filename);
 	}
 	//基本参数
-	$records = 100;   //记录总数
+	$records = 70;   //记录总数
 	$pagesize = 5;   //每页显示的记录数【当所有记录只能够显示1页时,不会出现分页列表】
 	//配置数组【可缺省,表示默认配置】
 	$config = array(
 			 'pagelistsize' => 7   			//翻页列表的大小【不能小于5,默认simple--10 default--7】
 			,'pagename'     => 'page'   //get方式传递和解析翻页参数时的参数名称【默认page】
-			,'theme'				=> 'default'    
+			,'theme'		=> 'default'
 			/*主题【默认default】： simple  上一页 1 2 3 4 5 6 7 8 9 10 下一页
 													default 上一页 1 2 ... 5 6 7 8 9 ... 下一页 总页数 跳转到n页 */
 			,'toolbars'     => array('up','down','jump')
 			/*工具栏使能【数组形式,需要开启谁就向数组中加入对应值,默认全部使能,simple下使能jump无效】:	
 																						up--上一页 down--下一页 jump--跳转到n页 */
-			,'align'				=> 'center'   /*
-			列表对齐方式【相对于其父元素,默认center】: left--左对齐 center--居中 right--右对齐 */
+			,'align'		=> 'center'
+		  	/*列表对齐方式【相对于其父元素,默认center】: left--左对齐 center--居中 right--右对齐 */
 		);
 	//获取单例分页对象
-	$page = Page::getInstance($records,$pagesize,$config);
+	$page = Page::getInstance($records, $pagesize, $config);
 	//获取记录的起始行
 	$startrow = $page->getStartRow();
-	echo "记录起始行为：".$startrow;
+	echo "记录起始行为：" . $startrow;
 ?>
 <!DOCTYPE html>
 <html lang="zh">
