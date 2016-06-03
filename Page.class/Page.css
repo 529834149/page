@@ -1,57 +1,57 @@
 /*分页的CSS样式*/
 .pagination{
-			font-size:14px;
-			margin:30px 0px;
-			color:gray;}	
+        font-size:14px;
+        margin:20px 0px;
+        color:gray;}
 .pagination a{
-			text-decoration:none;
-			border:1px solid #E8E8E8;}
+        text-decoration:none;
+        border:1px solid #E8E8E8;}
 .pagination a,.pagination strong{
-			margin:0px 1px;
-			text-align:center;
-			display:inline-block;
-			border-radius:3px;}			
+        margin:0px 1px;
+        text-align:center;
+        display:inline-block;
+        border-radius:3px;}
 .pagination .page{	
-			width:34px;
-			line-height:34px;
-			background:#FFFFFF;}
+        width:34px;
+        line-height:34px;
+        background:#FFFFFF;}
 .pagination .page:hover{
-			background-color:#f2f8ff;
-			border:1px solid #38f;}
+        background-color:#f2f8ff;
+        border:1px solid #38f;}
 .pagination .page,.pagination .page:visited,.pagination .page:hover{
-			color:blue;}
+        color:blue;}
 .pagination strong{
-			color:black;
-			background-color:white;	
-			width:34px;
-			height:34px;
-			line-height:34px;
-			font-weight:bold;}
+        color:black;
+        background-color:white;
+        width:34px;
+        height:34px;
+        line-height:34px;
+        font-weight:bold;}
 .pagination .button{
-			width:64px;
-			height:34px;
-			line-height:34px;
-			margin:0px 6px;}
+        width:64px;
+        height:34px;
+        line-height:34px;
+        margin:0px 6px;}
 .pagination .button b{
-			font-size:14px;
-			margin:1px;}		
+        font-size:14px;
+        margin:1px;}
 .pagination .button,.pagination .button:visited,.pagination .button:hover{
-			color:gray;}
+        color:gray;}
 .pagination .enable:hover{
-			background-color:#f2f8ff;
-			border:1px solid #38f;}
+        background-color:#f2f8ff;
+        border:1px solid #38f;}
 .pagination .disable:hover{
-			cursor:default;}
+        cursor:default;}
 .pagination #jump{
-			width:32px;
-			height:22px;
-			margin:0px 4px;
-			text-align:center;
-			border:1px solid #E8E8E8;}		
+        width:32px;
+        height:22px;
+        margin:0px 4px;
+        text-align:center;
+        border:1px solid #E8E8E8;}
 .pagination .go{
-			width:50px;
-			height:26px;
-			line-height:26px;
-			margin:0px 4px;}		
+        width:50px;
+        height:26px;
+        line-height:26px;
+        margin:0px 7px;}
 .pagination .go,.pagination .go:visited,.pagination .go:hover{
-			color:black;}
+        color:black;}
