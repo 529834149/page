@@ -6,7 +6,7 @@
  *
  * eg:	$page = Page::getInstance($records,$pagesize,$config)
  * 必选参数：$records 记录总数
- * 					$pagesize 每页展示的记录数
+ *         $pagesize 每页展示的记录数
  * 可选配置项：$config 配置数组
  * 								
  * simple:   1 2 3 4 5 6 7 8 9 10
@@ -23,7 +23,7 @@ function autoLoad($classname){
 }
 //基本参数
 $records = 70;  //记录总数
-$pagesize = 5;  //每页显示的记录数【当所有记录只能够显示1页时,不会出现分页列表】
+$pageSize = 5;  //每页显示的记录数【当所有记录只能够显示1页时,不会出现分页列表】
 //配置数组【可缺省,表示默认配置】
 $config = array(
     'pagelistsize'  => 7         //翻页列表的大小【不能小于5,默认simple--10 default--7】
@@ -38,10 +38,13 @@ $config = array(
              /*列表对齐方式【相对于其父元素,默认center】: left--左对齐 center--居中 right--右对齐 */
 );
 //获取单例分页对象
-$page = Page::getInstance($records, $pagesize, $config);
+$page = Page::getInstance($records, $pageSize, $config);
 //获取记录的起始行
-$startrow = $page->getStartRow();
-echo "记录起始行为：" . $startrow;
+$startRow = $page->getStartRow();
+$currentPage = $page->getCurrentPage();
+echo "记录起始行为：" . $startRow . "；每页显示记录数为：" . $pageSize;
+echo "<hr>";
+echo "当前页：" . $currentPage;
 ?>
 <!DOCTYPE html>
 <html lang="zh">

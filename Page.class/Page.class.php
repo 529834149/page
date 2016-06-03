@@ -6,7 +6,7 @@
  * 
  * eg:	$page = Page::getInstance($records,$pagesize,$config)
  * 必选参数：$records 记录总数
- * 					$pagesize 每页展示的记录数
+ *         $pagesize 每页展示的记录数
  * 可选配置项：$config 配置数组
  * 								
  * simple:   1 2 3 4 5 6 7 8 9 10
@@ -235,6 +235,14 @@ private function pageList()
 public function getStartRow()
 {
     return $this->startrow;
+}
+/**
+ * 查询当前页码
+ * @return int
+ */
+public function getCurrentPage()
+{
+    return $this->page;
 }
 /**
  * 展示分页列表
