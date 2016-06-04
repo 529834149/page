@@ -4,7 +4,7 @@
  * @author fanhaobai & fanhaobai@gmail.com
  * @date 2016-05-21
  * 
- * eg:	$page = Page::getInstance($records,$pagesize,$config)
+ * eg:	$page =new Page($records,$pagesize,$config)
  * 必选参数：$records 记录总数
  *         $pagesize 每页展示的记录数
  * 可选配置项：$config 配置数组
@@ -32,18 +32,14 @@ private $startrow;        //记录的起始行号,可通过getStartRow()获取
 private $startpage;       //滑动列表起始页
 private $endpage;         //滑动列表结束页
 private $uri = NULL;
-private static $instance; //实例,可通过getInstance()创建或获取
-/**
- * 私有克隆
- */
-private function __clone(){}
+
 /**
  * 私有构造方法
  * @param $records 总记录数
  * @param $pagesize 每页记录数
  * @param $config 配置数组【可缺省】
  */
-private function __construct($records, $pagesize, array $config = NULL)
+public function __construct($records, $pagesize, array $config = NULL)
 {
     //必选参数
     $this->records = $records;
@@ -261,20 +257,6 @@ public function pagination()
         $str .= '</div>' . "\r\n";
     }
     return $str;
-}
-/**
- * 得到分页对象
- * @param $records
- * @param $pagesize
- * @param $config 可选配置参数
- * @return obj
- */
-public static function getInstance($records, $pagesize, array $config = NULL)
-{
-    if (!(self::$instance instanceof self)) {
-        self::$instance = new Page($records, $pagesize, $config);
-    }
-    return self::$instance;
 }
 /*---end---*/
 }

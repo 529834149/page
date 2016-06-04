@@ -4,7 +4,7 @@
  * @author fanhaobai & fanhaobai@gmail.com
  * @date 2016-05-21
  *
- * eg:	$page = Page::getInstance($records,$pagesize,$config)
+ * eg:	$page = new Page($records,$pagesize,$config)
  * 必选参数：$records 记录总数
  *         $pagesize 每页展示的记录数
  * 可选配置项：$config 配置数组
@@ -38,7 +38,7 @@ $config = array(
              /*列表对齐方式【相对于其父元素,默认center】: left--左对齐 center--居中 right--右对齐 */
 );
 //获取单例分页对象
-$page = Page::getInstance($records, $pageSize, $config);
+$page = new Page($records, $pageSize, $config);
 //获取记录的起始行
 $startRow = $page->getStartRow();
 $currentPage = $page->getCurrentPage();
