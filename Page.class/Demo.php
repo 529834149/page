@@ -4,9 +4,9 @@
  * @author fanhaobai & fanhaobai@gmail.com
  * @date 2016-05-21
  *
- * eg:	$page = new Page($records,$pagesize,$config)
+ * eg:	$page = new Page($records,$pageSize,$config)
  * 必选参数：$records 记录总数
- *         $pagesize 每页展示的记录数
+ *         $pageSize 每页展示的记录数
  * 可选配置项：$config 配置数组
  * 								
  * simple:   1 2 3 4 5 6 7 8 9 10
@@ -16,18 +16,18 @@
 */	
 //设置自动加载
 spl_autoload_register("autoLoad");
-function autoLoad($classname){
-    $filename="./$classname.class.php";
-    if(file_exists($filename))
-        include_once($filename);
+function autoLoad($className){
+    $fileName="./$className.class.php";
+    if(file_exists($fileName))
+        include_once($fileName);
 }
 //基本参数
-$records = 70;  //记录总数
-$pageSize = 5;  //每页显示的记录数【当所有记录只能够显示1页时,不会出现分页列表】
+$records = 100;  //记录总数
+$pageSize = 8;  //每页显示的记录数【当所有记录只能够显示1页时,不会出现分页列表】
 //配置数组【可缺省,表示默认配置】
 $config = array(
-    'pagelistsize'  => 7         //翻页列表的大小【不能小于5,默认simple--10 default--7】
-    ,'pagename'     => 'page'   //get方式传递和解析翻页参数时的参数名称【默认page】
+    'pageListSize'  => 7         //翻页列表的大小【不能小于5,默认simple--10 default--7】
+    ,'pageName'     => 'page'   //get方式传递和解析翻页参数时的参数名称【默认page】
     ,'theme'        => 'default'
               /*主题【默认default】： simple  上一页 1 2 3 4 5 6 7 8 9 10 下一页
                                     default 上一页 1 2 ... 5 6 7 8 9 ... 下一页 总页数 跳转到n页 */
